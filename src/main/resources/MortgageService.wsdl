@@ -1,0 +1,377 @@
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/">
+    <wsdl:types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+            <s:element name="CFE_GetLoanHistory">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CFE_GetLoanHistoryResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CFE_GetLoanHistoryResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CFE_GetHistory">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CFE_GetHistoryResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CFE_GetHistoryResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CFE_GetHistoryXML">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="CFE_GetHistoryXMLResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="CFE_GetHistoryXMLResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetHistory">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetHistoryResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="FICS_GetHistoryResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfo">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfoResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="FICS_GetInfoResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfoDebug">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfoDebugResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="FICS_GetInfoDebugResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfoXML">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inLoanNum" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="FICS_GetInfoXMLResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="FICS_GetInfoXMLResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="LoadFICSfromAcct">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="inAccountNumber" type="s:string"/>
+                        <s:element minOccurs="0" maxOccurs="1" name="LiveOrTest" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="LoadFICSfromAcctResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" name="LoadFICSfromAcctResult">
+                            <s:complexType mixed="true">
+                                <s:sequence>
+                                    <s:any/>
+                                </s:sequence>
+                            </s:complexType>
+                        </s:element>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+    </wsdl:types>
+    <wsdl:message name="CFE_GetLoanHistorySoapIn">
+        <wsdl:part name="parameters" element="tns:CFE_GetLoanHistory"/>
+    </wsdl:message>
+    <wsdl:message name="CFE_GetLoanHistorySoapOut">
+        <wsdl:part name="parameters" element="tns:CFE_GetLoanHistoryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="CFE_GetHistorySoapIn">
+        <wsdl:part name="parameters" element="tns:CFE_GetHistory"/>
+    </wsdl:message>
+    <wsdl:message name="CFE_GetHistorySoapOut">
+        <wsdl:part name="parameters" element="tns:CFE_GetHistoryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="CFE_GetHistoryXMLSoapIn">
+        <wsdl:part name="parameters" element="tns:CFE_GetHistoryXML"/>
+    </wsdl:message>
+    <wsdl:message name="CFE_GetHistoryXMLSoapOut">
+        <wsdl:part name="parameters" element="tns:CFE_GetHistoryXMLResponse"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetHistorySoapIn">
+        <wsdl:part name="parameters" element="tns:FICS_GetHistory"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetHistorySoapOut">
+        <wsdl:part name="parameters" element="tns:FICS_GetHistoryResponse"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoSoapIn">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfo"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoSoapOut">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoDebugSoapIn">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfoDebug"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoDebugSoapOut">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfoDebugResponse"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoXMLSoapIn">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfoXML"/>
+    </wsdl:message>
+    <wsdl:message name="FICS_GetInfoXMLSoapOut">
+        <wsdl:part name="parameters" element="tns:FICS_GetInfoXMLResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LoadFICSfromAcctSoapIn">
+        <wsdl:part name="parameters" element="tns:LoadFICSfromAcct"/>
+    </wsdl:message>
+    <wsdl:message name="LoadFICSfromAcctSoapOut">
+        <wsdl:part name="parameters" element="tns:LoadFICSfromAcctResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="wsFICSSoap">
+        <wsdl:operation name="CFE_GetLoanHistory">
+            <wsdl:input message="tns:CFE_GetLoanHistorySoapIn"/>
+            <wsdl:output message="tns:CFE_GetLoanHistorySoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistory">
+            <wsdl:input message="tns:CFE_GetHistorySoapIn"/>
+            <wsdl:output message="tns:CFE_GetHistorySoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistoryXML">
+            <wsdl:input message="tns:CFE_GetHistoryXMLSoapIn"/>
+            <wsdl:output message="tns:CFE_GetHistoryXMLSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetHistory">
+            <wsdl:input message="tns:FICS_GetHistorySoapIn"/>
+            <wsdl:output message="tns:FICS_GetHistorySoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfo">
+            <wsdl:input message="tns:FICS_GetInfoSoapIn"/>
+            <wsdl:output message="tns:FICS_GetInfoSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoDebug">
+            <wsdl:input message="tns:FICS_GetInfoDebugSoapIn"/>
+            <wsdl:output message="tns:FICS_GetInfoDebugSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoXML">
+            <wsdl:input message="tns:FICS_GetInfoXMLSoapIn"/>
+            <wsdl:output message="tns:FICS_GetInfoXMLSoapOut"/>
+        </wsdl:operation>
+        <wsdl:operation name="LoadFICSfromAcct">
+            <wsdl:input message="tns:LoadFICSfromAcctSoapIn"/>
+            <wsdl:output message="tns:LoadFICSfromAcctSoapOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="wsFICSSoap" type="tns:wsFICSSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CFE_GetLoanHistory">
+            <soap:operation soapAction="http://tempuri.org/CFE_GetLoanHistory" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistory">
+            <soap:operation soapAction="http://tempuri.org/CFE_GetHistory" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistoryXML">
+            <soap:operation soapAction="http://tempuri.org/CFE_GetHistoryXML" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetHistory">
+            <soap:operation soapAction="http://tempuri.org/FICS_GetHistory" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfo">
+            <soap:operation soapAction="http://tempuri.org/FICS_GetInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoDebug">
+            <soap:operation soapAction="http://tempuri.org/FICS_GetInfoDebug" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoXML">
+            <soap:operation soapAction="http://tempuri.org/FICS_GetInfoXML" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="LoadFICSfromAcct">
+            <soap:operation soapAction="http://tempuri.org/LoadFICSfromAcct" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="wsFICSSoap12" type="tns:wsFICSSoap">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CFE_GetLoanHistory">
+            <soap12:operation soapAction="http://tempuri.org/CFE_GetLoanHistory" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistory">
+            <soap12:operation soapAction="http://tempuri.org/CFE_GetHistory" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CFE_GetHistoryXML">
+            <soap12:operation soapAction="http://tempuri.org/CFE_GetHistoryXML" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetHistory">
+            <soap12:operation soapAction="http://tempuri.org/FICS_GetHistory" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfo">
+            <soap12:operation soapAction="http://tempuri.org/FICS_GetInfo" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoDebug">
+            <soap12:operation soapAction="http://tempuri.org/FICS_GetInfoDebug" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FICS_GetInfoXML">
+            <soap12:operation soapAction="http://tempuri.org/FICS_GetInfoXML" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="LoadFICSfromAcct">
+            <soap12:operation soapAction="http://tempuri.org/LoadFICSfromAcct" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="wsFICS">
+        <wsdl:port name="wsFICSSoap" binding="tns:wsFICSSoap">
+            <soap:address location="http://test-appa1.corp.additionfi.com/wsFICS/wsfics.asmx"/>
+        </wsdl:port>
+        <wsdl:port name="wsFICSSoap12" binding="tns:wsFICSSoap12">
+            <soap12:address location="http://test-appa1.corp.additionfi.com/wsFICS/wsfics.asmx"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
