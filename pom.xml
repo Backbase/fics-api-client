@@ -31,7 +31,7 @@
         <byte-buddy.version>1.12.8</byte-buddy.version>
         <cglib.version>3.3.0</cglib.version>
         <objenesis.version>3.2</objenesis.version>
-        <org.json.version>20220320</org.json.version>
+        <org.json.version>20230227</org.json.version>
 
         <!-- Plugin Versions -->
         <cxf-codegen-plugin>3.4.2</cxf-codegen-plugin>
